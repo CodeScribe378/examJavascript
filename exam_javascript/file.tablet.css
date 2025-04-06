@@ -1,0 +1,22 @@
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+
+    .wrapper{
+
+        background-color: rgba(100, 48, 48, 1);
+    }
+
+    #f1 > p{
+
+        color: white;
+    }
+    .pLi{
+
+        color: white;
+    }
+
+
+    .title{
+        color: lightyellow;
+    }
+
+}

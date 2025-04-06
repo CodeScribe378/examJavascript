@@ -1,0 +1,49 @@
+@media screen and (max-width: 480px){
+    .wrapper{
+
+        background-color: indigo;
+    }
+
+    #f1 > p{
+
+        color: cornflowerblue;
+        font-size: 20px;
+    }
+    .pLi{
+
+        color: mediumvioletred;
+    }
+
+
+    .title{
+        color: fuchsia;
+    }
+
+
+    .wrapper{
+        width: 360px;
+        height: 550px;
+        background-color:rgba(147, 117, 117, 1);
+        padding-left: 3px;
+    }
+    #wrapperText{
+        width: 350px;
+        height: 200px;
+        background-color: lavenderblush;
+        margin-left: 2px;
+        margin-top: 20px;
+    }
+    button{
+        font-size: 18px;
+    }
+    #sortByValue{
+        margin-left: 180px;
+    }
+    #add{
+        margin-left: 2px;
+
+    }
+    #sortByName{
+        margin-left: 20px;
+    }
+}
