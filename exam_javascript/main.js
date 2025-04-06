@@ -1,3 +1,4 @@
+
 let form = document.getElementById('f1');
 let input = document.getElementById('input');
 let buttonSortByName = document.getElementById('sortByName');
@@ -12,7 +13,7 @@ console.log(arrayNameValue);
 form.onsubmit = function(ev) {
     ev.preventDefault();
     let nameValue = input.value.trim();
-    if (nameValue.match(/^\w+\s*=\s*\w+$/)) {
+    if (!!nameValue.match(/[0-9]/g) || !!nameValue.match(/\w+/g)){
         let nameValuePair = nameValue.split('=');
         nameValuePair = nameValuePair.map(s => s.trim());
         let name = nameValuePair[0];
@@ -78,8 +79,6 @@ buttonDelete.addEventListener('click', function() {
     text.remove()
     listSorted.remove()
 });
-
-
 
 
 
