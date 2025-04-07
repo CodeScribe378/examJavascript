@@ -37,8 +37,7 @@ form.onsubmit = function(ev) {
 };
 
 
-
-buttonSortByName.addEventListener('click', function(){
+buttonSortByName.onclick=function(){
 
     let arraySortedName=arrayNameValue.sort((a, b) => {
         if (!isNaN (a.name) && !isNaN (b.name)) {
@@ -47,8 +46,6 @@ buttonSortByName.addEventListener('click', function(){
             return a.name.length - b.name.length;
         }
     });
-
-
     let ullNameSortedName = document.createElement('ul');
     for (let item of arraySortedName) {
         let liName = document.createElement('li');
@@ -56,9 +53,7 @@ buttonSortByName.addEventListener('click', function(){
         ullNameSortedName.appendChild(liName);
     }
     listSortedFirst.appendChild(ullNameSortedName)
-
-});
-
+};
 
 buttonSortByValue.addEventListener('click', function(){
 
@@ -70,13 +65,13 @@ buttonSortByValue.addEventListener('click', function(){
         }
     });
 
-    let ullNameSortedValue = document.createElement('ul');
+    let ulNameSortedValue = document.createElement('ul');
     for (let item of arraySortedValue) {
         let liValue = document.createElement('li');
         liValue.innerText = `${item.name}=${item.value}`;
-        ullNameSortedValue.appendChild(liValue);
+        ulNameSortedValue.appendChild(liValue);
     }
-    listSortedSecond.appendChild(ullNameSortedValue)
+    listSortedSecond.appendChild(ulNameSortedValue)
 
 });
 

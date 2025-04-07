@@ -55,7 +55,9 @@ input{
 }
 #listSortedFirst{
     margin-left: 50px;
+    background-color: bisque;
 }
 #listSortedSecond{
-    margin-left: 50px;
+    margin-left: 70px;
+    background-color: silver;
 }
