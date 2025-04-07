@@ -13,7 +13,7 @@ console.log(arrayNameValue);
 form.onsubmit = function(ev) {
     ev.preventDefault();
     let nameValue = input.value.trim();
-    if (!!nameValue.match(/^[a-zA-Z0-9]+\s*=\s*[a-zA-Z0-9]+$/)){
+    if (!!nameValue.match(/^\s*\w+\s*=\s*\w+\s*$/) || !!nameValue.match(/^\s*\d+\s*=\s*\d+\s*$/)){
         let nameValuePair = nameValue.split('=');
         nameValuePair = nameValuePair.map(s => s.trim());
         let name = nameValuePair[0];
