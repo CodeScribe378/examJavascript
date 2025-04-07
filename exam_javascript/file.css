@@ -53,6 +53,9 @@ input{
     height: 38px;
     margin-top: 10px;
 }
-#listSorted{
+#listSortedFirst{
+    margin-left: 50px;
+}
+#listSortedSecond{
     margin-left: 50px;
 }

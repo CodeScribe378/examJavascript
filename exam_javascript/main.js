@@ -5,7 +5,8 @@ let buttonSortByName = document.getElementById('sortByName');
 let buttonSortByValue = document.getElementById('sortByValue');
 let buttonDelete = document.getElementById('delete');
 let text = document.getElementById('text');
-let listSorted = document.getElementById('listSorted');
+let listSortedFirst = document.getElementById('listSortedFirst');
+let listSortedSecond = document.getElementById('listSortedSecond')
 
 let arrayNameValue = [];
 console.log(arrayNameValue);
@@ -35,51 +36,55 @@ form.onsubmit = function(ev) {
     }
 };
 
-buttonSortByName.onclick = function() {
-    arrayNameValue.sort((a, b) => {
-        if (!isNaN(a.name) && !isNaN(b.name)) {
+
+
+buttonSortByName.addEventListener('click', function(){
+
+    let arraySortedName=arrayNameValue.sort((a, b) => {
+        if (!isNaN (a.name) && !isNaN (b.name)) {
             return a.name - b.name;
         } else {
             return a.name.length - b.name.length;
         }
     });
 
-    let ullNameSorted = document.createElement('ul');
-    for (let item of arrayNameValue) {
-        let li = document.createElement('li');
-        li.innerText = `${item.name}=${item.value}`;
-        ullNameSorted.appendChild(li);
+
+    let ullNameSortedName = document.createElement('ul');
+    for (let item of arraySortedName) {
+        let liName = document.createElement('li');
+        liName.innerText = `${item.name}=${item.value}`;
+        ullNameSortedName.appendChild(liName);
     }
-    listSorted.appendChild(ullNameSorted)
-};
+    listSortedFirst.appendChild(ullNameSortedName)
+
+});
 
 
 buttonSortByValue.addEventListener('click', function(){
 
-    arrayNameValue.sort((a, b) => {
-        if (!isNaN(a.value) && !isNaN(b.value)) {
+    let arraySortedValue=arrayNameValue.sort((a, b) => {
+        if (!isNaN (a.value) && !isNaN (b.value)) {
             return a.value - b.value;
         } else {
             return a.value.length - b.value.length;
         }
     });
 
-    let ullNameSorted = document.createElement('ul');
-    for (let item of arrayNameValue) {
-        let li = document.createElement('li');
-        li.innerText = `${item.name}=${item.value}`;
-        ullNameSorted.appendChild(li);
+    let ullNameSortedValue = document.createElement('ul');
+    for (let item of arraySortedValue) {
+        let liValue = document.createElement('li');
+        liValue.innerText = `${item.name}=${item.value}`;
+        ullNameSortedValue.appendChild(liValue);
     }
-    listSorted.appendChild(ullNameSorted)
+    listSortedSecond.appendChild(ullNameSortedValue)
 
 });
 
 buttonDelete.addEventListener('click', function() {
-    arrayNameValue = [];
     text.remove()
-    listSorted.remove()
+    listSortedFirst.remove()
+    listSortedSecond.remove()
 });
-
 
 
 
