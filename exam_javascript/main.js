@@ -15,7 +15,7 @@ form.onsubmit = function(ev) {
     let nameValue = input.value.trim();
     if (!!nameValue.match(/^\s*\w+\s*=\s*\w+\s*$/) || !!nameValue.match(/^\s*\d+\s*=\s*\d+\s*$/)){
         let nameValuePair = nameValue.split('=');
-        nameValuePair = nameValuePair.map(s => s.trim());
+        nameValuePair = nameValuePair.map(value => value.trim());
         let name = nameValuePair[0];
         if (!isNaN(name)) {
             name = +name;
