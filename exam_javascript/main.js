@@ -13,15 +13,15 @@ console.log(arrayNameValue);
 
 form.onsubmit = function(ev) {
     ev.preventDefault();
-    let nameValue = input.value.trim();
+    let nameValue = input.value;
     if (!!nameValue.match(/^\s*\w+\s*=\s*\w+\s*$/) || !!nameValue.match(/^\s*\d+\s*=\s*\d+\s*$/)){
         let nameValuePair = nameValue.split('=');
-        nameValuePair = nameValuePair.map(value => value.trim());
-        let name = nameValuePair[0];
+        let nameValuePairMaped = nameValuePair.map(value => value.trim());
+        let name = nameValuePairMaped[0];
         if (!isNaN(name)) {
             name = +name;
         }
-        let value = nameValuePair[1];
+        let value = nameValuePairMaped[1];
         if (!isNaN(value)) {
             value = +value;
         }
