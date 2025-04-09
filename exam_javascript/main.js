@@ -1,4 +1,4 @@
-
+let form = document.forms [0]
 let buttonSortByName = document.getElementById('sortByName');
 let buttonSortByValue = document.getElementById('sortByValue');
 let buttonDelete = document.getElementById('delete');
@@ -8,7 +8,7 @@ let listSortedSecond = document.getElementById('listSortedSecond')
 
 let arrayNameValue = [];
 console.log(arrayNameValue);
-let form = document.forms [0]
+
 form.onsubmit = function(ev) {
     ev.preventDefault();
     let nameValue =this.valueName.value;
