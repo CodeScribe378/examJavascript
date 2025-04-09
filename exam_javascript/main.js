@@ -1,6 +1,4 @@
 
-let form = document.getElementById('f1');
-let input = document.getElementById('input');
 let buttonSortByName = document.getElementById('sortByName');
 let buttonSortByValue = document.getElementById('sortByValue');
 let buttonDelete = document.getElementById('delete');
@@ -10,10 +8,10 @@ let listSortedSecond = document.getElementById('listSortedSecond')
 
 let arrayNameValue = [];
 console.log(arrayNameValue);
-
+let form = document.forms [0]
 form.onsubmit = function(ev) {
     ev.preventDefault();
-    let nameValue = input.value;
+    let nameValue =this.valueName.value;
     if (!!nameValue.match(/^\s*\w+\s*=\s*\w+\s*$/) || !!nameValue.match(/^\s*\d+\s*=\s*\d+\s*$/)){
         let nameValuePair = nameValue.split('=');
         let nameValuePairMaped = nameValuePair.map(value => value.trim());
